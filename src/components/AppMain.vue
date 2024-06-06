@@ -1,6 +1,7 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
+// import "@fortawesome/free-regular-svg-icons";
 export default {
   name: 'AppMain',
   data() {
@@ -64,7 +65,8 @@ export default {
           />
         </li>
         <li>
-          <span>Voto:{{ film.vote_average }}</span>
+          <span>Voto:{{Math.ceil(Number(film.vote_average) / 2) }} </span>
+          <!-- <i class="fa-regular fa-star"></i> -->
         </li>
       </ul>
     </div>
@@ -83,13 +85,13 @@ export default {
           <span>Titolo originale:{{ tv.original_name }}</span>
         </li>
         <li>
-          <img class="lang"
+          <img
             :src="`../public/bandiere/${tv.original_language}.jpg`"
             :alt="tv.original_language"
           />
         </li>
         <li>
-          <span>Voto:{{ tv.vote_average }}</span>
+          <span>Voto:{{Math.ceil(Number(tv.vote_average) / 2) }}</span>
         </li>
       </ul>
     </div>
@@ -118,6 +120,7 @@ div{
 
       .copertina{
         width: 100%;
+        max-height: 400px;
         object-fit: cover;
       }
     }

@@ -45,3 +45,8 @@ Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezz
     ### Svolgimento
     - Aggiungo allo store una chiave con url base di immagine e dimensione per la copertina
     - Aggiungo list item per l'immagine e compongo l' url che mi serve
+    - Divido il numero per 2 e trasformo il decimale in intero per eccesso con Math.ceil
+    - Installo e importo font awesome
+
+
+### HO FATTO CASINO CON L'INSTALLAZIONE DI FONT AWESOME... &#128532; &#128557;
