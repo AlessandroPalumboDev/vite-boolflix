@@ -11,12 +11,12 @@ export default {
   },
 
   methods:{
-      searchMovie(){
+      searchFilm(){
         const params = {};
         params.api_key = this.store.apiKey;
         params.query = this.store.queryResearch;
 
-        axios.get(this.store.apiResearchMovieUrl,{
+        axios.get(this.store.apiResearchFilmUrl,{
           params,
         })
         .then((response) => {
@@ -28,8 +28,8 @@ export default {
 </script>
 
 <template>
-    <input type="text" placeholder="Cerca" v-model="this.store.queryResearch" @keyup.enter="searchMovie">
-    <button @click="searchMovie">cerca</button>
+    <input type="text" placeholder="Cerca" v-model="this.store.queryResearch" @keyup.enter="searchFilm">
+    <button @click="searchFilm">cerca</button>
     <div>
       <ul v-for='film in this.store.filmTrovati'>
         <li>
@@ -39,7 +39,10 @@ export default {
           <span>Titolo originale:{{ film.original_title }}</span>
         </li>
         <li>
-          <span>Lingua:{{ film.original_language }}</span>
+          <img
+            :src="`../public/bandiere/${film.original_language}.jpg`"
+            :alt="film.original_language"
+          />
         </li>
         <li>
           <span>Voto:{{ film.vote_average }}</span>
@@ -54,13 +57,16 @@ div{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  
+
   ul{
     width: calc(100% / 3 - 100px);
     margin: 50px;
 
     li{
       margin: 5px 0;
+      img{
+        width: 20px;
+      }
     }
   }
 }
