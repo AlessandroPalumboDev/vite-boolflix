@@ -32,3 +32,5 @@ https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&
     ### Svolgimento
     - Scarico e importo icone di due bandiere da usare (il nome di ogni bandiera è uguale alla stringa di una lingua)
     - Sostituisco lo span all'interno del li con un img (v-bind su src e alt in modo che se l'immagine non viene trovata si visualizza come alt la stringa originale)
+    - Aggiungo allo store url di ricerca delle serie e array vuoto per le serie (come per i film)
+    - Creo un metodo come per la ricerca dei film ma con dati diversi presi dall API di riferimento

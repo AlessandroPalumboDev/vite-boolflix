@@ -22,14 +22,30 @@ export default {
         .then((response) => {
           this.store.filmTrovati = response.data.results;
         });
+      },
+
+      searchTv(){
+        const params = {};
+        params.api_key = this.store.apiKey;
+        params.query = this.store.queryResearch;
+
+        axios.get(this.store.apiResearchTvUrl,{
+          params,
+        })
+        .then((response) => {
+          this.store.tvTrovati = response.data.results;
+        });
       }
     }
 };
 </script>
 
 <template>
-    <input type="text" placeholder="Cerca" v-model="this.store.queryResearch" @keyup.enter="searchFilm">
-    <button @click="searchFilm">cerca</button>
+    <input type="text" placeholder="Cerca" v-model="this.store.queryResearch" @keyup.enter="searchFilm(), searchTv()">
+    <button @click="searchFilm(), searchTv()">cerca</button>
+
+    <h2>FILM</h2>
+
     <div>
       <ul v-for='film in this.store.filmTrovati'>
         <li>
@@ -49,9 +65,35 @@ export default {
         </li>
       </ul>
     </div>
+
+    <h2>SERIE TV</h2>
+
+    <div>
+      <ul v-for='tv in this.store.tvTrovati'>
+        <li>
+          <span>Titolo:{{ tv.name }}</span>
+        </li>
+        <li>
+          <span>Titolo originale:{{ tv.original_name }}</span>
+        </li>
+        <li>
+          <img
+            :src="`../public/bandiere/${tv.original_language}.jpg`"
+            :alt="tv.original_language"
+          />
+        </li>
+        <li>
+          <span>Voto:{{ tv.vote_average }}</span>
+        </li>
+      </ul>
+    </div>
 </template>
     
 <style scoped lang="scss">
+h2{
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
 div{
   display: flex;
   align-items: center;
