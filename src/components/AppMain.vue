@@ -49,6 +49,9 @@ export default {
     <div>
       <ul v-for='film in this.store.filmTrovati'>
         <li>
+          <img :src="store.apiCopertina + film.poster_path" :alt='`Immagine di copertina di "-${film.title}-" non trovata`' class="copertina">
+        </li>
+        <li>
           <span>Titolo:{{ film.title }}</span>
         </li>
         <li>
@@ -71,13 +74,16 @@ export default {
     <div>
       <ul v-for='tv in this.store.tvTrovati'>
         <li>
+          <img :src="store.apiCopertina + tv.poster_path" :alt='`Immagine di copertina di "-${tv.name}-" non trovata`' class="copertina">
+        </li>
+        <li>
           <span>Titolo:{{ tv.name }}</span>
         </li>
         <li>
           <span>Titolo originale:{{ tv.original_name }}</span>
         </li>
         <li>
-          <img
+          <img class="lang"
             :src="`../public/bandiere/${tv.original_language}.jpg`"
             :alt="tv.original_language"
           />
@@ -101,13 +107,18 @@ div{
   flex-wrap: wrap;
 
   ul{
-    width: calc(100% / 3 - 100px);
-    margin: 50px;
-
+    width: calc(100% / 3 - 50px);
+    margin: 25px;
     li{
       margin: 5px 0;
+      
       img{
         width: 20px;
+      }
+
+      .copertina{
+        width: 100%;
+        object-fit: cover;
       }
     }
   }

@@ -7,6 +7,7 @@ export const store = reactive({
     filmTrovati: [],
     apiResearchTvUrl: 'https://api.themoviedb.org/3/search/tv?',
     tvTrovati: [],
+    apiCopertina: 'https://image.tmdb.org/t/p/w342/'
 
 
 });
