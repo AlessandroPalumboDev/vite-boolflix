@@ -10,51 +10,26 @@ export default {
       store,
     };
   },
-  
+
   components:{
     AppFilmList,
     AppTvList,
   },
 
-  methods:{
 
-    searchFilm(){
-      const params = {};
-      params.api_key = this.store.apiKey;
-      params.query = this.store.queryResearch;
-
-      axios.get(this.store.apiResearchFilmUrl , {params}).then((response) => {
-        this.store.filmTrovati = response.data.results;
-      });
-    },
-
-
-    searchTv(){
-      const params = {};
-      params.api_key = this.store.apiKey;
-      params.query = this.store.queryResearch;
-
-      axios.get(this.store.apiResearchTvUrl,{
-        params,
-      })
-      .then((response) => {
-        this.store.tvTrovati = response.data.results;
-      });
-    }
-  }
 };
 </script>
 
 <template>
-    <input type="text" placeholder="Cerca" v-model="this.store.queryResearch" @keyup.enter="searchFilm(), searchTv()">
-    <button @click="searchFilm(), searchTv()">Cerca</button>
     <AppFilmList />
-    <AppTvList/>
+    <AppTvList />
 
 
 </template>
     
 <style scoped lang="scss">
-
+header{
+  background-color: black;
+}
 </style>
     

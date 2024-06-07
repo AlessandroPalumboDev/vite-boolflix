@@ -19,8 +19,8 @@ export default {
 </script>
 
 <template>
-    <h2 >FILM</h2>
-    <div>
+    <h2 >Lista Film della ricerca: "{{ store.queryResearch }}"</h2>
+    <div class="lista">
         <AppCard class="card"
         v-for='film in this.store.filmTrovati'
         :copertina="store.apiCopertina + film.poster_path"
@@ -28,6 +28,7 @@ export default {
         :titoloOriginale="film.original_title"
         :lingua="film.original_language"
         :voto="Math.ceil(Number(film.vote_average) / 2)"
+        :descrizione="film.overview"
         />
 
     </div>
@@ -37,8 +38,9 @@ export default {
 
 <style scoped lang="scss">
 h2{
-  text-align: center;
-  margin: 20px 0 10px 0;
+  padding: 20px 0 10px 20px;
+  background-color: grey;
+
 }
 
 div{
@@ -46,11 +48,11 @@ display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: grey;
 
   .card{
-    margin: 25px;
-    width: calc(100% / 3 - 50px);
+    margin: 20px;    
   }
 }
-
 </style>
+

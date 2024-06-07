@@ -7,19 +7,11 @@ export const store = reactive({
     filmTrovati: [],
     apiResearchTvUrl: 'https://api.themoviedb.org/3/search/tv?',
     tvTrovati: [],
-    apiCopertina: 'https://image.tmdb.org/t/p/w342/'
+    apiCopertina: 'https://image.tmdb.org/t/p/w342/',
+    apiLingua: 'it-IT'
 
 
 });
 
-// https://api.themoviedb.org/3/search/movie
-// ?query=ritorno%20al%20futuro
-// &include_adult=false
-// &language=it-IT
-// &page=1
 
-// https://api.themoviedb.org/3/search/tv?
-// ?query=ritorno%20al%20futuro
-// &include_adult=false
-// &language=it-IT
-// &page=1
+

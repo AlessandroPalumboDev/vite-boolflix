@@ -49,11 +49,19 @@ Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezz
     - Installo e importo font awesome
     - Con un v-for stampo tante volte quante il valore del voto per le stelle piene, per le vuote 5 - il valore di voto
 
-## Milestone 4: &cross;
+## Milestone 4: &check;
 - Trasformiamo quello che abbiamo fatto fino ad ora in una vera e propria webapp, creando un layout completo simil-Netflix:
 - Un header che contiene logo e search bar
 - Dopo aver ricercato qualcosa nella searchbar, i risultati appaiono sotto forma di “card” in cui lo sfondo è rappresentato dall’immagine di copertina (consiglio la poster_path con w342)
 - Andando con il mouse sopra una card (on hover), appaiono le informazioni aggiuntive già prese nei punti precedenti più la overview
+- Mockup
+![alt text](image.png)
+- Mockup (on hover sul primo elemento): ![alt text](image-1.png)
+
+    ### Svolgimento
+    - Creo componente header
+    - Stilizzo i vari componenti
+    - Aggiungo :hover alla card con cambio del display a immagine e indo
 
 
 

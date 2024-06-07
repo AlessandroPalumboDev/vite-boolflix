@@ -2,7 +2,7 @@
 export default{
     name: 'AppCard',
     props:[
-        'copertina', 'titolo', 'titoloOriginale', 'lingua', 'voto'
+        'copertina', 'titolo', 'titoloOriginale', 'lingua', 'voto', 'descrizione'
     ],
 
 
@@ -11,47 +11,95 @@ export default{
 </script>
 
 <template>
-<div>
-  <ul >
-    <li>
-      <img :src="copertina" :alt='`Immagine di copertina di "-${titolo}-" non trovata`' class="copertina">
-    </li>
-    <li>
-      <span>Titolo:{{ titolo }}</span>
-    </li>
-    <li>
-      <span>Titolo originale:{{ titoloOriginale }}</span>
-    </li>
-    <li>
-      <img
-        :src="`../public/bandiere/${lingua}.jpg`"
-        :alt="lingua"
-      />
-    </li>
-    <li>
-      <span>Voto: {{ voto }}
+  <!-- CARD -->
+  <div class="card">
+
+    <!-- IMMAGINE COPERTINA -->
+    <div >
+      <img class="locandina"  :src="copertina" :alt='`Immagine di copertina di "-${titolo}-" non trovata`' >
+    </div>
+
+    <!-- INFO -->
+    <div class="info">
+
+      <!-- titolo -->
+      <div>
+        <span>Titolo:{{ titolo }}</span>
+      </div>
+
+      <!-- titolo originale -->
+      <div>
+        <span>Titolo originale:{{ titoloOriginale }}</span>
+      </div>
+
+
+    <!-- lingua -->
+      <div>
+        <img
+          :src="`../public/bandiere/${lingua}.jpg`"
+          :alt="lingua"
+        />
+      </div>
+
+      <!-- voto -->
+      <div>
         <span v-for="n in voto">
           <font-awesome-icon icon="fa-solid fa-star" />
         </span>
         <span v-for="n in 5 - voto ">
           <font-awesome-icon icon="fa-regular fa-star" />
         </span>
-      </span>
-    </li>
-  </ul>
-</div>
+
+      </div>
+      
+      <!-- descrizione -->
+      <div>
+        <p>
+          Trama: {{ descrizione }}
+        </p>
+        </div>
+    </div>
+    
+  </div>
 </template>
 
 <style scoped lang="scss">
+
+.card{
+  height: 500px;
+  width: 342px;
+  padding: 0 30px;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+
+  &:hover .info{
+    display: inline-block;
+  }
+  &:hover .locandina{
+    display: none;
+  }
+}
+
+div{
+  overflow-y: auto;
+  scrollbar-width: none;
+  margin: 10px 0;
+  .info{
+    display: none;
+    overflow-y: hidden;
+  }
+
+
+}
 
 img{
     width: 20px;
 }
 
-.copertina{
+.locandina{
     width: 100%;
-    max-height: 400px;
-    object-fit:cover;
+    object-fit:contain;
 }
 
 
