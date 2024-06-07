@@ -1,7 +1,6 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
-// import "@fortawesome/free-regular-svg-icons";
 export default {
   name: 'AppMain',
   data() {
@@ -45,7 +44,7 @@ export default {
     <input type="text" placeholder="Cerca" v-model="this.store.queryResearch" @keyup.enter="searchFilm(), searchTv()">
     <button @click="searchFilm(), searchTv()">cerca</button>
 
-    <h2>FILM</h2>
+    <h2 >FILM</h2>
 
     <div>
       <ul v-for='film in this.store.filmTrovati'>
@@ -65,8 +64,10 @@ export default {
           />
         </li>
         <li>
-          <span>Voto:{{Math.ceil(Number(film.vote_average) / 2) }} </span>
-          <!-- <i class="fa-regular fa-star"></i> -->
+          <span>Voto:{{Math.ceil(Number(film.vote_average) / 2) }} 
+            <font-awesome-icon icon="fa-solid fa-star" />
+            <font-awesome-icon icon="fa-regular fa-star" />
+          </span>
         </li>
       </ul>
     </div>
@@ -91,7 +92,10 @@ export default {
           />
         </li>
         <li>
-          <span>Voto:{{Math.ceil(Number(tv.vote_average) / 2) }}</span>
+          <span>Voto:{{Math.ceil(Number(tv.vote_average) / 2) }} 
+            <font-awesome-icon icon="fa-solid fa-star" />
+            <font-awesome-icon icon="fa-regular fa-star" />
+          </span>
         </li>
       </ul>
     </div>
@@ -121,7 +125,7 @@ div{
       .copertina{
         width: 100%;
         max-height: 400px;
-        object-fit: cover;
+        object-fit:contain;
       }
     }
   }
