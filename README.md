@@ -35,7 +35,7 @@ https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&
     - Aggiungo allo store url di ricerca delle serie e array vuoto per le serie (come per i film)
     - Creo un metodo come per la ricerca dei film ma con dati diversi presi dall API di riferimento
 
-## Milestone 3: &cross;
+## Milestone 3: &check;
 - In questa milestone come prima cosa aggiungiamo la copertina del film o della serie al nostro elenco. Ci viene passata dall’API solo la parte finale dell’URL, questo perché poi potremo generare da quella porzione di URL tante dimensioni diverse. Dovremo prendere quindi l’URL base delle immagini di TMDB: https://image.tmdb.org/t/p/ per poi aggiungere la dimensione che vogliamo generare (troviamo tutte le dimensioni possibili a questo link: https://www.themoviedb.org/talk/53c11d4ec3a3684cf4006400) per poi aggiungere la parte finale dell’URL passata dall’API.
 Esempio di URL:
 https://image.tmdb.org/t/p/w342/wwemzKWzjKYJFfCeiB57q3r4Bcm.png
@@ -47,6 +47,7 @@ Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezz
     - Aggiungo list item per l'immagine e compongo l' url che mi serve
     - Divido il numero per 2 e trasformo il decimale in intero per eccesso con Math.ceil
     - Installo e importo font awesome
+    - Con un v-for stampo tante volte quante il valore del voto per le stelle piene, per le vuote 5 - il valore di voto
 
 
 

@@ -6,6 +6,7 @@ export default{
     ],
 
 
+
 }
 </script>
 
@@ -28,9 +29,13 @@ export default{
       />
     </li>
     <li>
-      <span>Voto:{{Math.ceil(Number(voto) / 2) }} 
-        <font-awesome-icon icon="fa-solid fa-star" />
-        <font-awesome-icon icon="fa-regular fa-star" />
+      <span>Voto: {{ voto }}
+        <span v-for="n in voto">
+          <font-awesome-icon icon="fa-solid fa-star" />
+        </span>
+        <span v-for="n in 5 - voto ">
+          <font-awesome-icon icon="fa-regular fa-star" />
+        </span>
       </span>
     </li>
   </ul>
