@@ -15,7 +15,7 @@ export default{
   <div class="card">
 
     <!-- IMMAGINE COPERTINA -->
-    <div >
+    <div class="locandina">
       <img class="locandina"  :src="copertina" :alt='`Immagine di copertina di "-${titolo}-" non trovata`' >
     </div>
 
