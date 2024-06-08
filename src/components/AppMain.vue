@@ -23,8 +23,6 @@ export default {
 <template>
     <AppFilmList />
     <AppTvList />
-
-
 </template>
     
 <style scoped lang="scss">

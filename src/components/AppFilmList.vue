@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <h2 v-if="store.filmTrovati.length">Lista Film della ricerca: "{{ store.queryResearch }}"</h2>
+    <h2 v-if="this.store.filmTrovati.length">Lista Film della ricerca: "{{ store.queryResearch }}"</h2>
     <div class="lista">
         <AppCard class="card"
         v-for='film in this.store.filmTrovati'
@@ -37,26 +37,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-h2{
-  padding: 10px 20px ;
-  margin: 20px ;
-  background-color: rgb(56, 55, 55);
-  border-radius: 20px;
-  color: rgb(211, 211, 211)
+@use '../assets/scss/partials/AppList'
 
-}
-
-div{
-display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: grey;
-
-  .card{
-    margin: 20px;
-    width: calc(100% / 3 - 40px);    
-  }
-}
 </style>
 

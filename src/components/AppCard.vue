@@ -65,43 +65,6 @@ export default{
 
 <style scoped lang="scss">
 
-.card{
-  height: 500px;
-  width: 342px;
-  padding: 0 30px;
-  background-color: black;
-  border: 1px solid white;
-  color: white;
-
-  &:hover .info{
-    display: inline-block;
-  }
-  &:hover .locandina{
-    display: none;
-  }
-
-
-}
-
-.info{
-  margin: 50px 0;
-  height: calc(100% - 100px);
-  display: none;
-  overflow-y: hidden;
-  overflow-y: auto;
-  scrollbar-width: none;
-  }
-
-
-
-img{
-    width: 20px;
-}
-
-.locandina{
-    width: 100%;
-    object-fit:contain;
-}
-
+@use '../assets/scss/partials/AppCard.scss'
 
 </style>

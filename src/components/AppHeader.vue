@@ -35,22 +35,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: black;
-    h1{
-        color: red;
-    }
-    div{
-        input, button{
-            padding: 10px 15px;
-            border-radius: 20px;
-            margin-inline: 10px;
-        }
-    }
+@use '../assets/scss/partials/AppHeader.scss'
 
-}
+
 </style>
