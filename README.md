@@ -61,7 +61,7 @@ Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezz
     ### Svolgimento
     - Creo componente header
     - Stilizzo i vari componenti
-    - Aggiungo :hover alla card con cambio del display a immagine e indo
+    - Aggiungo :hover alla card con cambio del display a immagine e info
 
 
 

@@ -46,7 +46,9 @@ div{
     }
     div{
         input, button{
-            padding: 5px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            margin-inline: 10px;
         }
     }
 

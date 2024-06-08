@@ -79,19 +79,20 @@ export default{
   &:hover .locandina{
     display: none;
   }
+
+
 }
 
-div{
+.info{
+  margin: 50px 0;
+  height: calc(100% - 100px);
+  display: none;
+  overflow-y: hidden;
   overflow-y: auto;
   scrollbar-width: none;
-  margin: 10px 0;
-  .info{
-    display: none;
-    overflow-y: hidden;
   }
 
 
-}
 
 img{
     width: 20px;

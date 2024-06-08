@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <h2 >Lista Film della ricerca: "{{ store.queryResearch }}"</h2>
+    <h2 v-if="store.filmTrovati.length">Lista Film della ricerca: "{{ store.queryResearch }}"</h2>
     <div class="lista">
         <AppCard class="card"
         v-for='film in this.store.filmTrovati'
@@ -38,8 +38,11 @@ export default {
 
 <style scoped lang="scss">
 h2{
-  padding: 20px 0 10px 20px;
-  background-color: grey;
+  padding: 10px 20px ;
+  margin: 20px ;
+  background-color: rgb(56, 55, 55);
+  border-radius: 20px;
+  color: rgb(211, 211, 211)
 
 }
 
@@ -51,7 +54,8 @@ display: flex;
   background-color: grey;
 
   .card{
-    margin: 20px;    
+    margin: 20px;
+    width: calc(100% / 3 - 40px);    
   }
 }
 </style>
