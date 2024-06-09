@@ -61,3 +61,11 @@ searchTv(){
 
 </template>
 
+<style scoped lang="scss">
+main{
+  max-width: 1200px;
+  min-width: 1147px;
+  margin: auto;
+}
+</style>
+

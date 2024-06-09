@@ -44,10 +44,10 @@ export default{
       <!-- voto -->
       <div>
         <span v-for="n in voto">
-          <font-awesome-icon icon="fa-solid fa-star" />
+          <font-awesome-icon icon="fa-solid fa-star" class="stellina"/>
         </span>
         <span v-for="n in 5 - voto ">
-          <font-awesome-icon icon="fa-regular fa-star" />
+          <font-awesome-icon icon="fa-regular fa-star"  class="stellina"/>
         </span>
 
       </div>
