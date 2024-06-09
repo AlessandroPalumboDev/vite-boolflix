@@ -20,12 +20,13 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="container">
         <h1>
             BOOLFLIX
         </h1>
         <div>
             <input type="text" placeholder="Cerca" v-model="this.store.queryResearch" @keyup.enter="$emit('cercaRisultati')">
+            <!-- @keyup="$emit('cercaRisultati')" mi sarebbe piaciuto di più, rimuovendo anche il tasto cerca -->
             <button @click="$emit('cercaRisultati')">cerca</button>
 
         </div>
