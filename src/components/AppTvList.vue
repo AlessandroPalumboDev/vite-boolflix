@@ -19,7 +19,6 @@ export default {
 </script>
 
 <template>
-  <div class="container">
     <h2 v-if="this.store.tvTrovati.length">Lista Serie TV della ricerca: "{{ store.queryResearch }}"</h2>
     <div>
         <AppCard class="card"
@@ -30,12 +29,10 @@ export default {
         :lingua="tv.original_language"
         :voto="Math.ceil(Number(tv.vote_average) / 2)"
         :descrizione="tv.overview"
-
         />
 
     </div>
 
-  </div>
 
 </template>
 
